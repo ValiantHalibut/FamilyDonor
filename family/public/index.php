@@ -1,5 +1,5 @@
 <?php
-echo "This is family/public/index.php";
+echo "This is family/public/index.php <br />";
 define ("APP_PATH", realpath("..") . "/");
 
 
