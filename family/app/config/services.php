@@ -10,7 +10,6 @@ use Phalcon\Events\Manager as EventsManager;
 
 $di = new FactoryDefault();
 
-/*
 $di->set("dispatcher", function() {
     $eventsManager = new EventsManager;
     
@@ -23,7 +22,6 @@ $di->set("dispatcher", function() {
     
     return $dispatcher;
 });
-*/
 
 $di->set("url", function() use($config) {
     $url = new Url();
