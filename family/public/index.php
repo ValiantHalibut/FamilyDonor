@@ -1,6 +1,4 @@
 <?php
-echo "This is family/public/index.php <br />";
-
 use Phalcon\Config\Adapter\Ini as ConfigIni;
 use Phalcon\Mvc\Application;
 
@@ -14,7 +12,6 @@ try {
     require APP_PATH . "app/config/services.php";
 
     $application = new Application($di);
-    echo "Next step: application";
 
     echo $application->handle()->getContent();
 } catch(Exception $e) {

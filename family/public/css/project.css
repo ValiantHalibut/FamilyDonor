@@ -1,0 +1,117 @@
+/* Global Styles */
+
+@media(min-width: 1024px) {
+    #main {
+        width: 1024px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.pure-g div {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.box {
+    padding: .5em;
+    background-color: ghostwhite;
+}
+
+/* Donation Tracking Vis */
+
+#donationTracker {
+    width: 60px;
+    height: 600px;
+    border: 2px solid #000034;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0px 0px 15px 0px #000034;
+}
+#donationPromised {
+    background-color: #eeaaaa;
+    width: 100%;
+    height: 75%;
+    position: absolute;
+    bottom:0;
+    box-shadow: 0px 0px 7px 0px #000034;
+}
+#donationConfirmed {
+    background-color: red;
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    bottom:0;
+    border-top: 1px solid black;
+    box-shadow: 0px 0px 10px 0px #000034;
+}
+
+/* Donation Markers */
+.markers {
+    position: relative;
+}
+
+.markers > div {
+    border-top: 1px solid black;
+    position: absolute;
+    font-size: 2.5em;
+}
+#markerTop {
+    top: 0;
+    width: calc(100% + 30px);
+}
+#marker2 {
+    top: 200px;
+    width: 100%;
+}
+#marker1 {
+    top: 400px;
+    width: 100%;
+}
+
+.totalAmount {
+    position: relative;
+}
+.totalAmount > h1 {
+    position: absolute;
+    bottom: 0;
+}
+
+
+/* Other Styles */
+
+.header {
+    background-color: darkslategray;
+    color: ghostwhite;
+    text-align: center;
+}
+.view {
+    background-color: ghostwhite;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+.donate {
+    background-color: lightslategray;
+}
+
+.pure-form .admin-fieldset {
+    padding-top: 0;
+    padding-left: .5em;
+    background-color: ghostwhite;
+}
+.admin-fieldset p {
+    width: 95%;
+    font-size: .9em;
+}
+.button-container {
+    text-align: center;
+    margin-top: 5px;
+}
+.logFail {
+    color: red;
+}
