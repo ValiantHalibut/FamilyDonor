@@ -14,6 +14,7 @@ try {
     $application = new Application($di);
 
     echo $application->handle()->getContent();
+    echo "hello";
 } catch(Exception $e) {
     echo $e->getMessage();
 }
