@@ -20,4 +20,9 @@ class SecurityPlugin extends Plugin
             ));
         }
     }
+    
+    public function _getAcl()
+    {
+        // ACL List
+    }
 }
