@@ -48,4 +48,25 @@ class UserController extends ControllerBase
         $this->session->destroy();
         $this->response->redirect('');
     }
+    
+    public function setupAction()
+    {
+        $request = new Request();
+        
+        if($request->isPost()) {
+            $password = $request->getPost('password');
+            $userType = $request->getPost('userType');
+            
+            $user = Users::findFirst("type = '" . $userType . "'");
+            
+            if(!$user) {
+                $user = new Users();
+                $user->setType($userType);
+            }
+            
+            $user->setPass($this->security->hash($password));
+            
+            $user->save();
+        }
+    }
 }
