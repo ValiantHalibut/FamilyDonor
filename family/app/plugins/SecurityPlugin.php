@@ -11,12 +11,12 @@ class SecurityPlugin extends Plugin
         $controller = $dispatcher->getControllerName();
         $action = $dispatcher->getActionName();
         
-        $allowed = true;
+        $allowed = false;
         
         if($allowed) {
             $dispatcher->forward(array(
-                "controller"    => $controller,
-                "action"        => $action
+                "controller"    => "index",
+                "action"        => "index"
             ));
         }
     }
