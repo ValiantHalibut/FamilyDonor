@@ -9,7 +9,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-        <h1>Title Goes Here!</h1>
-        <?php echo $this->getContent() ?>
+        <div class="pure-g" id="main">
+        <?php if(in_array($this->session->userType, ["donor", "admin"])) { ?>
+            <div class="pure-u-1-5 pure-md-1">
+                <a href="<?php echo $this->url->get('user/logout');?>" class="pure-button">Logout</a>
+            </div>
+        <?php } ?>
+            <div class="pure-u-1 header">
+                <h1>Header Stuff Goes Here Eventually</h1>
+            </div>
+            <?php echo $this->getContent() ?>
+        </div>
     </body>
 </html>
