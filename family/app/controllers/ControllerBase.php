@@ -6,7 +6,6 @@ class ControllerBase extends Controller
 {
     public function initialize()
     {
-        echo "ControllerBase";
         $this->assets
                 ->addCss("public/css/project.css")
                 ->addJs("public/js/project.js");
