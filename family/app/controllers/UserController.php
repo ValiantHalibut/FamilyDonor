@@ -59,10 +59,10 @@ class UserController extends ControllerBase
             
             $user = Users::findFirst("type = '" . $userType . "'");
             
-            if(!$user) {
-                $user = new Users();
-                $user->setType($userType);
-            } 
+            //if(!$user) {
+                //$user = new Users();
+                //$user->setType($userType);
+            //} 
             
             $user->setPass($this->security->hash($password));
             
