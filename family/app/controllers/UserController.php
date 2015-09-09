@@ -62,6 +62,9 @@ class UserController extends ControllerBase
             if(!$user) {
                 $user = new Users();
                 $user->setType($userType);
+            } else {
+                $newID = $user->getId() + 1;
+                $user->setId($newId);
             }
             
             $user->setPass($this->security->hash($password));
