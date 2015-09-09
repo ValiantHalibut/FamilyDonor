@@ -65,7 +65,7 @@ class UserController extends ControllerBase
             }
             
             $user->setPass($this->security->hash($password));
-            echo $user;
+            echo $user->getType();
             //$user->save();
         }
     }
