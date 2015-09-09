@@ -58,7 +58,7 @@ class UserController extends ControllerBase
             $userType = $request->getPost('userType');
             
             $user = Users::findFirst("type = '" . $userType . "'");
-            echo $user->getType();
+            echo "<script>console.log('" . $user->getType() . "');</script>";
             if(!$user) {
                 $user = new Users();
                 $user->setType($userType);
