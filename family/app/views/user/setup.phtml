@@ -1,0 +1,14 @@
+<div class="pure-u-1 pure-u-md-1-5">
+    <form class="pure-form pure-form-stacked" action="<?php echo $this->url->get('admin/setup');?>" method="post">
+        <fieldset>
+            <label for="userType">User Type</label>
+            <select name="userType" class="pure-input-1">
+                <option value="donor">Donor</option>
+                <option value="admin">Admin</option>
+            </select>
+            <label for="password">Password</label>
+            <input name="password" type="password" class="pure-input-1" required>
+            <button type="submit" class="pure-button pure-button-primary pure-input-1">Log In</button>
+        </fieldset>
+    </form>
+</div>
