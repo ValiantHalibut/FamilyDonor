@@ -4,6 +4,11 @@ use Phalcon\Mvc\Model;
 
 class Users extends Model
 {
+    function initialize()
+	{
+		$this->skipAttributes(array("id"));
+	}
+        
 	protected $type;
 	protected $pass;
 
