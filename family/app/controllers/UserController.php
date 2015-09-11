@@ -57,19 +57,16 @@ class UserController extends ControllerBase
             $password = $request->getPost('password');
             $userType = $request->getPost('userType');
             
-            $user = Users::findFirst("type = '" . $userType . "'");
+            $user = null; //Users::findFirst("type = '" . $userType . "'");
 
             if(!$user) {
                 $user = new Users();
                 $user->setType($userType);
-                $user->setPass($this->security->hash($password));
-                $user->save();
-            } else {
-                $user->setPass($this->security->hash($password));
-                $user->update();
-            }
+            } 
             
+            $user->setPass($this->security->hash($password));
             
+            $user->save();
         }
     }
 }

@@ -4,7 +4,7 @@ use Phalcon\Mvc\View;
 use Phalcon\DI\FactoryDefault;
 use Phalcon\Mvc\Url;
 use Phalcon\Mvc\Dispatcher;
-use Phalcon\Db\Adapter\Pdo\Postgresql as DbAdapter;
+//use Phalcon\Db\Adapter\Pdo\Postgresql as DbAdapter;
 use Phalcon\Session\Adapter\Files as Session;
 use Phalcon\Events\Manager as EventsManager;
 
@@ -42,8 +42,8 @@ $di->setShared("session", function() {
 });
 
 $di->set("db", function() use ($config) {
-    //$dbadapter = "Phalcon\Db\Adapter\Pdo\\" . $config->database->adapter;
-    return new DbAdapter(array(
+    $dbadapter = "Phalcon\Db\Adapter\Pdo\\" . $config->database->adapter;
+    return new $dbadapter(array(
         "host"      => $config->database->host,
         "username"  => $config->database->username,
         "password"  => $config->database->password,
