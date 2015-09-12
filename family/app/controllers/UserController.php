@@ -27,7 +27,7 @@ class UserController extends ControllerBase
                     $this->_registerSession($user);
                     $forwardController = $userType;
                 } else {
-                    $responseText = $user->getType();
+                    $responseText = 'Invalid Password';
                 }
             } else {
                 $responseText = 'Invalid User';
