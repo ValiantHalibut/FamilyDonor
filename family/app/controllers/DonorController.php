@@ -6,7 +6,6 @@ class DonorController extends ControllerBase
 {
     public function indexAction()
     {
-        echo "hello";
         $request = new Request();
         
         if($request->isPost()) {
@@ -19,7 +18,7 @@ class DonorController extends ControllerBase
             $donation->setVerified(0);
             $donation->save();
         }
-        echo "World";
+
         $this->setDonationData();
     }
 }

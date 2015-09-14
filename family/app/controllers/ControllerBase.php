@@ -11,7 +11,7 @@ class ControllerBase extends Controller
                 ->addJs("public/js/project.js");
     }
     
-    public function setDonationDate()
+    public function setDonationData()
     {
         echo "1";
         $donationTotals = DonationTotals::findFirst();
