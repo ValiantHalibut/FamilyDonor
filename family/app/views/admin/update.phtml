@@ -1,0 +1,10 @@
+<div class="pure-u-1">
+    <h1>Data Updated!</h1>
+    <br />
+    If you aren't redirected back to the admin page, click <a href="<?php echo $this->url->get('admin/index'); ?>">here</a>.
+</div>
+<script>
+    setTimeout(function() {
+        window.location.href = "<?php echo $this->url->get('admin/index');?>";
+    }, 2000);
+</script>
