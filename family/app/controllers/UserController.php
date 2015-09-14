@@ -8,6 +8,7 @@ class UserController extends ControllerBase
     {
         echo "Hello";
         $this->session->set('userType', $user->getType());
+        echo "World";
     }
     
     public function loginAction()
