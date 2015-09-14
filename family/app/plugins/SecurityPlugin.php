@@ -12,6 +12,7 @@ class SecurityPlugin extends Plugin
 {
     public function beforeDispatch(Event $event, Dispatcher $dispatcher)
     {
+        echo "Hello";
         $userType = $this->session->get('userType');
         
         if(!$userType) {
