@@ -30,6 +30,7 @@ project = {
             var dollarScale = trackerHeight / goal;
             
             promisedTrack.style.height = promised * dollarScale;
+            console.log(promised * dollarScale);
             confirmedTrack.style.height = confirmed * dollarScale;
         }
     }
