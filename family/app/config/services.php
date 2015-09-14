@@ -35,7 +35,7 @@ $di->set("view", function() use($config) {
     return $view;
 });
 
-$di->setShared("session", function() {
+$di->set("session", function() {
     $session = new Session();
     $session.start();
     return $session;
