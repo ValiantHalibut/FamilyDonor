@@ -6,6 +6,7 @@ class UserController extends ControllerBase
 {
     private function _registerSession($user)
     {
+        echo "Hello";
         $this->session->set('userType', $user->getType());
     }
     
