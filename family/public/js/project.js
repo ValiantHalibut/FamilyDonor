@@ -18,6 +18,9 @@ project = {
             goal = goal.substr(1);
             confirmed = confirmed.substr(1);
             promised = promised.substr(1);
+            console.log(goal);
+            console.log(confirmed);
+            console.log(promised);
             
             var tracker = document.getElementById('donationTracker');
             var promisedTrack = document.getElementById('donationPromised');
