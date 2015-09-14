@@ -19,7 +19,7 @@ class DonorController extends ControllerBase
             $donation->setVerified(0);
             $donation->save();
         }
-        
+        echo "World";
         $this->setDonationData();
     }
 }
