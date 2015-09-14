@@ -15,7 +15,7 @@ project = {
             var confirmed = document.getElementById('confirmed').textContent;
             var promised = document.getElementById('promised').textContent;
             
-            goal = goal.substr(1);
+            //goal = goal.substr(1);
             confirmed = confirmed.substr(1);
             promised = promised.substr(1);
             console.log(goal);
