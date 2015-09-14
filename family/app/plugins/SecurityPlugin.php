@@ -12,7 +12,6 @@ class SecurityPlugin extends Plugin
 {
     public function beforeDispatch(Event $event, Dispatcher $dispatcher)
     {
-        /*
         $userType = $this->session->get('userType');
         
         if(!$userType) {
@@ -34,8 +33,6 @@ class SecurityPlugin extends Plugin
                     )
                 );
         }
-         
-         */
     }
     
     private function _getAcl()
