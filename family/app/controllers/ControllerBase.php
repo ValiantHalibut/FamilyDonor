@@ -13,13 +13,12 @@ class ControllerBase extends Controller
     
     public function setDonationData()
     {
-        echo "1";
         $donationTotals = DonationTotals::findFirst();
-        echo "2";
+        
         $goal = 1500;
         $confirmed = $donationTotals->getVerified();
         $promised = $donationTotals->getPromised();
-        echo "3";
+        
         $this->view->setVars(array(
             'goal'      => $goal,
             'confirmed' => $confirmed,
