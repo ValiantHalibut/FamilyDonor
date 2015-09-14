@@ -6,6 +6,7 @@ class DonorController extends ControllerBase
 {
     public function indexAction()
     {
+        echo "hello";
         $request = new Request();
         
         if($request->isPost()) {

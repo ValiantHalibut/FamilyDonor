@@ -26,7 +26,6 @@ class UserController extends ControllerBase
                 if($this->security->checkHash($password, $user->getPass())) {
                     $this->_registerSession($user);
                     $forwardController = $userType;
-                    echo "yo";
                 } else {
                     $responseText = 'Invalid Password';
                 }
