@@ -6,9 +6,7 @@ class UserController extends ControllerBase
 {
     private function _registerSession($user)
     {
-        echo "Hello";
         $this->session->set('userType', $user->getType());
-        echo "World";
     }
     
     public function loginAction()
@@ -28,6 +26,7 @@ class UserController extends ControllerBase
                 if($this->security->checkHash($password, $user->getPass())) {
                     $this->_registerSession($user);
                     $forwardController = $userType;
+                    echo "yo";
                 } else {
                     $responseText = 'Invalid Password';
                 }
