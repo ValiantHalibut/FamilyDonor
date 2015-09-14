@@ -4,15 +4,15 @@ use Phalcon\Mvc\Model;
 
 class DonationTotals extends Model
 {
-    protected $totalVerified;
-    protected $totalPromised;
+    protected $totalverified;
+    protected $totalpromised;
 
     public function getVerified()
     {
-	return $this->totalVerified;
+	return $this->totalverified;
     }
     public function getPromised()
     {
-	return $this->totalPromised;
+	return $this->totalpromised;
     }
 }
