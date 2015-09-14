@@ -15,6 +15,10 @@ project = {
             var confirmed = document.getElementById('confirmed').textContent;
             var promised = document.getElementById('promised').textContent;
             
+            goal = goal.substr(1);
+            confirmed = confirmed.substr(1);
+            promised = promised.substr(1);
+            
             var tracker = document.getElementById('donationTracker');
             var promisedTrack = document.getElementById('donationPromised');
             var confirmedTrack = document.getElementById('donationConfirmed');
